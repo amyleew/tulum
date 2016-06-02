@@ -1,16 +1,71 @@
-name: Jekyll Themes
-url: http://matt.harzewski.com
-description: Insert tagline here
+# Site settings
+title: Tulum 2017 Retreat
+email: ""
+description: "Tulum 2017 Retreat"
+url: "http://amyleew.github.io"
+baseurl: /tulum
+instagram_username: ""
+github_username:  ""
+deviantart_username: ""
+flickr_username: ""
+discus_shortname: ""
+share: true
 
-permalink: /themes/:title/
+# Owner/author information
+owner:
+  name:   "amy lee and nikki jay"
+  avatar: avatar.png
+  favicon: favicon.ico
+  description: "Tulum 2017 Retreat"
 
-gems: [jekyll-paginate]
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
+# Set 'provider' to false to turn commenting off globally.
+#Set 'provider: false' to disable comments globally.
+# Disable comments for individual pages/posts by specifying 'comments: false' in the page/post YAML Front Matter.
+#
+comments :
+  provider : disqus
+  disqus :
+    short_name : ""
 
-highlighter: pygments
-paginate: 20
+# Internal nav
+nav:
+ journal: "baseurl/journal/"
+ gallery: "baseurl/gallery/"
+ about: "baseurl/about/"
 
-markdown: rdiscount
-rdiscount:
-    extensions: ['smart']
+# All translation keys
+translations:
+ # 404.html
+  permalink: "/404.html"
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
+# Server
+destination:      	 ./_site
+port:             	 4000
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+paginate_path: "/journal/page:num/"
+permalink: "/journal/:title/"
+categories_path: "/journal/category/"
+tags_path: "/journal/tag/"
+gems: 
+ - jekyll-paginate
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+# SiteMap
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/writing/"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"

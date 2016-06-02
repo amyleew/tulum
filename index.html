@@ -1,59 +1,170 @@
 ---
-layout: default
-title: Jekyll Themes
+layout: home
 ---
 
-<div class="gallery">
-	{% for post in paginator.posts %}
-		<div class="item">
-			<a class="item-inner" href="{{ post.url }}">
-				<div class="item-image"><img src="/thumbnails/{{ post.thumbnail }}"></div>
-				<div class="item-name">{{ post.title }}</div>
-			</a>
-		</div>
-	{% endfor %}
-</div>
 
-<!-- Pager -->
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
 
-<div class="row-fluid">
-  <div class="span12">
-    <div class="pagination">
-      <ul>
-        {% if paginator.previous_page %}
+<!-- CSS -->
+     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/galleries.css" media="screen" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/WYSIWYG.css" media="screen" />
 
-          {% if paginator.previous_page == 1 %}
-            <li><a href="/">Prev</a></li>
-          {% else %}
-            <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
-          {% endif %}
 
-        {% else %}
-          <li><span class="disabled">Prev</span></li>
-        {% endif %}
 
-        {% if paginator.page == 1 %}
-          <li><span class="active">1</span></li>
-        {% else %}
-          <li><a href="/">1</a></li>
-        {% endif %}
+	<!-- Modernizr -->
+  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
 
-        {% for count in (2..paginator.total_pages) %}
 
-          {% if count == paginator.page %}
-            <li><span class="active">{{ count }}</span></li>
-          {% else %}
-            <li><a href="/page{{ count }}">{{ count }}</a></li>
-          {% endif %}
-        {% endfor %}
+</head>
 
-        {% if paginator.next_page %}
-          <li><a href="/page{{ paginator.next_page }}">Next</a></li>
-        {% else %}
-          <li><span class="disabled">Next</span></li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
-</div>
+<body class="fullscreen">
+
+<!-- MAIN CONTENT SECTION  _____________________________________________-->
+	<section id="content" role="main">
+		<div class="wrapper">
+
+			<!-- WYSIWYG -->
+
+		<div class="position-absolute">
+				<h2 class="big no-margin"><strong>TULUM&#8226;2017&#8226;RETREAT</strong></h2>
+				<h2>Get ready for the adventure of a lifetime!</h2>
+                     <div class="entry-summary">
+							<p>Join us for exploration, adventure and self-reflection on the warm, sunny coast of the Yucatan Peninsula, cradled in the Caribbean Sea. Challenge yourself to maximize joy, build connections, and be inspired to live your best year ever.</p>
+						</div><br />
+			</div>
+			
+			<div class="gallery fullscreen-gallery kenburns-gallery">
+
+				<canvas id="kenburns"></canvas>
+				
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+						<a href="#"><img src="{{ site.baseurl }}/img/slider/home01.jpg"  alt="" /></a>
+					</header>	
+				</figure>
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+						<a href="#"><img src="{{ site.baseurl }}/img/slider/home02.jpg"  alt="" /></a>
+					</header>
+				</figure>				
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+						<a href="#"><img src="{{ site.baseurl }}/img/slider/home03.jpg"  alt="" /></a>
+					</header>	
+				</figure>
+        <figure class="gallery-item">
+          <header class='gallery-icon'>
+            <a href="#"><img src="{{ site.baseurl }}/img/slider/home04.jpg"  alt="" /></a>
+          </header> 
+        </figure>
+
+        <figure class="gallery-item">
+          <header class='gallery-icon'>
+            <a href="#"><img src="{{ site.baseurl }}/img/slider/home05.jpg"  alt="" /></a>
+          </header>
+        </figure>       
+
+        <figure class="gallery-item">
+          <header class='gallery-icon'>
+            <a href="#"><img src="{{ site.baseurl }}/img/slider/home06.jpg"  alt="" /></a>
+          </header> 
+        </figure>       <figure class="gallery-item">
+          <header class='gallery-icon'>
+            <a href="#"><img src="{{ site.baseurl }}/img/slider/home07.jpg"  alt="" /></a>
+          </header> 
+        </figure>
+
+        <figure class="gallery-item">
+          <header class='gallery-icon'>
+            <a href="#"><img src="{{ site.baseurl }}/img/slider/home08.jpg"  alt="" /></a>
+          </header>
+        </figure>       
+
+        <figure class="gallery-item">
+          <header class='gallery-icon'>
+            <a href="#"><img src="{{ site.baseurl }}/img/slider/home09.jpg"  alt="" /></a>
+          </header> 
+        </figure>
+			<!-- END WYSIWYG -->
+			
+	
+		</div><!-- END .wrapper -->
+		
+	</section>
+
+<div id="footer" role="contentinfo"><!--
+		<ul class="soc-icons">
+
+                {% if site.instagram_username %}
+			<li>
+   <a href="https://instagram.com/{{ site.instagram_username }}" style="
+color:#dddddd; target="_blank" title="instagram">
+                       <i class="fa fa-instagram"></i>
+                     </span>
+</a></li>
+    {% endif %}
+                    {% if site.flickr_username %}
+						<li>
+   <a href="https://flickr.com/photos/{{ site.flickr_username }}" style="
+color:#dddddd; target="_blank" title="flickr">
+              <i class="fa fa-flickr"></i>
+                     </span>
+ </a></li>	
+     {% endif %}
+                    {% if site.deviantart_username %}
+			<li>
+   <a href="http://{{ site.deviantart_username }}.deviantart.com" style="
+color:#dddddd; target="_blank" title="DeviantArt">
+<i class="fa fa-deviantart"></i> </span>
+</a></li>	
+    {% endif %}
+                    {% if site.github_username %}
+                <li>
+   <a href="https://github.com/{{ site.github_username }}" style="
+color:#dddddd; target="_blank" title="Github">
+              <i class="fa fa-github"></i>
+                     </span>
+                   {% endif %}
+<li>
+    <a href="mailto:{{ site.email }}" style="
+color:#dddddd; target="_blank" title="Email">
+              <i class="fa fa-envelope-o"></i></span>
+          </a> </li>
+	
+					
+		</ul>	-->
+	</div>
+
+  
+<!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <script src="{{ site.baseurl }}/js/retina.min.js"></script> 
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include gallery cycle plugin -->
+<script src="{{ site.baseurl }}/js/jquery.cycle.min.js"></script>
+<!-- include kenburns plugins -->
+<script src="{{ site.baseurl }}/js/kenburns.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+
+
+       </body>
+    </html>
 
